@@ -1,0 +1,18 @@
+[project]
+name = "gcp-data-collection"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "trongdang10",email = "viettrong1010@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "gcp_data_collection", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
