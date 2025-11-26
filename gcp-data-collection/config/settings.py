@@ -1,4 +1,4 @@
-from dataclasses
+from dataclasses import dataclass
 from pathlib import Path
 import os
 
@@ -10,6 +10,6 @@ class Settings:
     gcs_raw_bucket: str = os.environ["GCS_RAW_BUCKET"]
     service_account_key: Path = Path(os.environ["GCP_SERVICE_ACCOUNT_KEY"])
     mongo_uri: str = os.environ["MONGO_URI"]
-    mongo_db: str = os.environ["MONGO_DB", "glamira"]
+    mongo_db: str = os.environ["MONGO_DB"]
 
 settings = Settings()
