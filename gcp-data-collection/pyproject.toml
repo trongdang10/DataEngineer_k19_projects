@@ -8,10 +8,16 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "google-cloud-storage (>=3.6.0,<4.0.0)"
 ]
 
 [tool.poetry]
-packages = [{include = "gcp_data_collection", from = "src"}]
+name = "gcp-data-collection"
+version = "0.1.0"
+packages = [{ include = "gcp_data_collection", from = "src"},
+            { include = "config" }
+]
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
