@@ -1,17 +1,22 @@
 from pathlib import Path 
 
 from gcp_data_collection import gcs
-from config.settings import settings   
+from config.settings import settings
 
+import logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
 
-LOCAL_FILE_PATH = Path("data/glamira_ubl_oct2019_nov2019.tar.gz")
-DESTINATION_PATH = "raw/glamira_ubl_oct2019_nov2019.tar.gz"
+LOCAL_FILE_PATH = Path("scripts/test_data.txt")
+DESTINATION_PATH = "README.txt"
 
 if not LOCAL_FILE_PATH.is_file():
     raise FileNotFoundError(f"Local file {LOCAL_FILE_PATH} does not exist.")
 
 # ensure the bucket exists
-# gcs.create_bucket()
+gcs.create_bucket()
 
 # upload the file
 gcs.upload_file(
