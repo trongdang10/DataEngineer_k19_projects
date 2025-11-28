@@ -1,23 +1,22 @@
-[project]
-name = "gcp-data-collection"
-version = "0.1.0"
-description = ""
-authors = [
-    {name = "trongdang10",email = "viettrong1010@gmail.com"}
-]
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "google-cloud-storage (>=3.6.0,<4.0.0)"
-]
-
 [tool.poetry]
 name = "gcp-data-collection"
 version = "0.1.0"
-packages = [{ include = "gcp_data_collection", from = "src"},
-            { include = "config" }
+description = ""
+authors = ["trongdang10 <viettrong1010@gmail.com>"]
+packages = [
+  { include = "gcp_data_collection", from = "src" },
+  { include = "config" }
 ]
 
+[tool.poetry.dependencies]
+python = ">=3.12"
+google-cloud-storage = "^3.6.0"
+google-api-python-client = "^2.187.0"
+google-auth = "^2.43.0"
+pymongo = "^4.15.4"
+ip2location = "^8.11.0"
+# remove the separate 'google' package (not needed) and 'bson' (PyMongo bundles BSON)
+aiohttp = "^3.13.2"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
