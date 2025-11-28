@@ -1,9 +1,5 @@
-# Credentials
+# Ignore sensitive and generated directories
 credentials/
-*.json
-
-.env
-*.log
-**/__pycache__/
-*.pyc
 data/
+input/
+output/
