@@ -1,3 +1,8 @@
+"""
+Configuration settings for the GCP data collection project.
+Reads values from environment variables.
+"""
+
 from dataclasses import dataclass
 from pathlib import Path
 import os
