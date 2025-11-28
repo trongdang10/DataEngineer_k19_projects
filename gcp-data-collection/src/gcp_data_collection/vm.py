@@ -1,4 +1,6 @@
-# src/gcp_data_collection/vm.py
+"""
+Helper functions for Google Compute Engine (GCE) VM management.
+"""
 from __future__ import annotations
 
 import logging

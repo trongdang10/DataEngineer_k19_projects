@@ -1,5 +1,5 @@
 """
-Docstring for gcp_data_collection.gcs
+helper functions for Google Cloud Storage (GCS) interactions.
 """
 from __future__ import annotations
 
